@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Animal Tracker</title>
+
+		<link rel="stylesheet" href="../lib/css/jquery.mobile.structure-1.4.5.min.css">
+		<link rel="stylesheet" href="../css/app.css">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+
+<script src="../lib/js/jquery-2.2.4.min.js"></script>
+<script src="../js/app.js"></script>
+<script src="../lib/js/jquery.mobile-1.4.5.min.js"></script>
+
+	</head>
+	<body>
+
+<!--signin page -->
+<section data-role="page" id="signin-page">
+	<div data-role="main">
+		<div class="flex-stretch"></div>
+			 <img class="centerimg" src="../img/cute-dog.jpg" alt="dog" style="width:100%; height:100%">
+		</div>
+		<form id="signin-form" data-ajax="false" style="padding:1em">
+			<div class="form-control">
+				<label for="signin-username" class="form-label">Username</label>
+				<input id="signin-username" type="text" class="form-input" data-role="none" placeholder="Type your user name">
+			</div>
+			<div class="form-control">
+				<label for="signin-password" class="form-label">Password</label>
+				<input id="signin-password" type="password" class="form-input" data-role="none" placeholder="Type your password">
+			</div>
+		<div class="form-control">
+				<a href="#recent-page" class="form-button">Sign In</a>
+			</div>
+			<div class="form-control" style="text-align: center; font-size:0.8em">
+				Don't have an account? <a href="#signup-page">Sign Up</a>!
+			</div>
+		</form>
+
+	</div>
+	
+</section>
+
+<!--signup page -->
+	<section data-role="page" id="signup-page">
+	<div data-role="main">
+		<form id="signup-form" data-ajax="false" style="padding:1em">
+			<div class="form-control">
+				<label for="signup-username" class="form-label">Username</label>
+				<input id="signup-username" type="text" class="form-input" data-role="none" placeholder="Type your password">
+			</div>
+			<div class="form-control">
+				<a href="#list-page" class="form-button">Sign Up</a>
+			</div>
+			<div class="form-control" style="text-align: center;font-size:0.8em">
+				Already have an account?<a href="#signin-page">Sign In</a>!
+			</div>
+		</form>
+	</div>
+	
+</section>
+
+<!--recent page -->
+	<section data-role="page" id="recent-page">
+	<div data-role="main">
+		<h1>Recent Map</h1>
+	</div>
+	<footer data-role="footer">
+			<ul>
+		<li><a href="#recent-page">Recent</a></li>
+		<li><a href="#list-page">List</a></li>
+		<li><a href="#user-profile-page">Profile</a></li>
+	</ul>
+
+	</footer>
+	
+</section>
+
+<!--list page -->
+	<section data-role="page" id="list-page">
+	<header data-role="header"><h1>Animals</h1>
+	<ul>
+		<li class="flex-stretch"></li>
+		<li><a href="#">+</a></li>	
+	</ul>
+</header>
+	<div data-role="main">
+		<ul>
+		<!--li*10>a[href=#animal-profile-page]>{Animal $}-->
+		<li><a href="#animal-profile-page">Animal1</a></li>
+		<li><a href="#animal-profile-page">Animal2</a></li>
+		<li><a href="#animal-profile-page">Animal3</a></li>
+		<li><a href="#animal-profile-page">Animal4</a></li>
+		<li><a href="#animal-profile-page">Animal5</a></li>
+		<li><a href="#animal-profile-page">Animal6</a></li>
+		<li><a href="#animal-profile-page">Animal7</a></li>
+		<li><a href="#animal-profile-page">Animal8</a></li>
+		<li><a href="#animal-profile-page">Animal9</a></li>
+		<li><a href="#animal-profile-page">Animal10</a></li>
+	</ul>
+
+
+
+	</div>
+	<footer data-role="footer">
+		<ul>
+		<li><a href="#recent-page">Recent</a></li>
+		<li><a href="#list-page">List</a></li>
+		<li><a href="#user-profile-page">Profile</a></li>
+	</ul>
+
+	</footer>
+
+	
+</section>
+
+<!--user-profile page -->
+	<section data-role="page" id="user-profile-page">
+	<div data-role="main">
+		<h1>User Profile</h1>
+	</div>
+	<footer data-role="footer">
+			<ul>
+		<li><a href="#recent-page">Recent</a></li>
+		<li><a href="#list-page">List</a></li>
+		<li><a href="#user-profile-page">Profile</a></li>
+	</ul>
+
+	</footer>
+	
+</section>
+
+<!--animal profile page -->
+	<section data-role="page" id="animal-profile-page">
+		<header data-role="header">
+			<h1>Animal Profile</h1>
+			<ul>
+		<li><a href="#" data-rel="back">Back</a></li>
+	</ul>
+		</header>
+	<div data-role="main">
+	</div>
+
+	
+</section>
+	</body>
+	</html>
