@@ -2,7 +2,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<title>Animal Tracker</title>
+		<title>Cartoons</title>
 
 		<link rel="stylesheet" href="../lib/css/jquery.mobile.structure-1.4.5.min.css">
 		<link rel="stylesheet" href="../css/app.css">
@@ -10,6 +10,8 @@
 
 <script src="../lib/js/jquery-2.2.4.min.js"></script>
 <script src="../js/app.js"></script>
+ <script src="../js/signin.js"></script>
+
 <script src="../lib/js/jquery.mobile-1.4.5.min.js"></script>
 
 	</head>
@@ -31,14 +33,19 @@
 				<input id="signin-password" type="password" class="form-input" data-role="none" placeholder="Type your password">
 			</div>
 		<div class="form-control">
-				<a href="#recent-page" class="form-button">Sign In</a>
+				<a href="#signin-page" class="form-button">Sign In</a>
 			</div>
 			<div class="form-control" style="text-align: center; font-size:0.8em">
 				Don't have an account? <a href="#signup-page">Sign Up</a>!
 			</div>
 		</form>
 
-	</div>
+<div class="modal" id="signin-warning">
+         <div class="modal-toast top" data-deactivate="#signin-warning">
+           <div class="message">Please fill in Username and Password</div>
+         </div>
+      </div>
+	
 	
 </section>
 
@@ -62,11 +69,150 @@
 </section>
 
 <!--recent page -->
+
 	<section data-role="page" id="recent-page">
+		<div data-role="main">
+			
+<!-- 				<div class="flex-none">
+					<span class="material-icons">search</span>
+				</div> -->
+			<div class="floater right bottom">
+				<div class="btn-circle" data-toggle="#recent-drawer">&plus;</div>
+			</div>
+			<div class="modal" id="recent-drawer">
+            <!-- <div class="modal-back" data-deactivate="#recent-drawer"></div> -->
+            <div class="modal-drawer left">
+               <div class="modal-head">Find Cartoons</div>
+               <div class="modal-body">
+                   Where's Snowball?
+
+                   <div class="form-control">
+						<label for="map-add-name" class="form-label">Name</label>
+						<input id="map-add-name" type="text" class="form-input" data-role="none" placeholder="Name of the cartoon">
+					</div>
+					<div class="form-control">
+						<label for="map-add-name" class="form-label">Movie</label>
+						<input id="map-add-name" type="text" class="form-input" data-role="none" placeholder="Name of the cartoon">
+					</div>
+
+                     <div class="form-control">
+               <a href="#" class="form-button" style="background-color:#F7C331; ">Track Now</a>
+            </div>
+
+
+        
+
+               </div>
+            </div>
+         </div>
+         </div>
+		<footer data-role="footer">
+			<ul>
+				<li><a href="#recent-page">Recent</a></li>
+				<li><a href="#list-page">List</a></li>
+				<li><a href="#user-profile-page">Profile</a></li>
+			</ul>
+		</footer>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+<!--list page -->
+	<section data-role="page" id="list-page">
+	<header data-role="header"><h1>Cartoons</h1>
+		<!--<ul>
+		<li class="flex-stretch"></li>
+		<li><a href="#" data-activate="#list-add-animal">+</a></li>	
+	</ul>-->
+</header>
+<form class="form-control" id="search" data-ajax="false" style="padding: 0.1em;">
+			<input type="search" class="form-search" data-role="none" placeholder="Search pets">
+			</form>
+							<a href="#" data-activate="#list-add-animal">+ Add New</a>
+						</div>
+					</div>
 	<div data-role="main">
-		<h1>Recent Map</h1>
-	</div>
-	<footer data-role="footer">
+         <div class="overscroll">
+            
+
+
+            <div class="animallist">
+
+              <!-- <div class="cartoon-item display-flex flex-justify-center">
+                  <div class="cartoon-item-single" style="padding:1px 2px 8px;margin: 0.3em">
+                     <a href="#animal-profile-page" class="ui-link" style="text-decoration:none">
+                        <div class="cartoon-image">
+                           <img src="../img/cartoon1.jpg" alt="" style="width:162px ">
+                        </div>
+                        <div class="cartoon-name" style="text-align:center;color:var(--color-neutral-lighter)">   </div>
+                     </a>
+                  </div>-->
+
+                  <div class="cartoon-item-single" style="padding:1px 2px 8px;margin: 0.3em">
+                     <a href="#animal-profile-page" class="ui-link" style="text-decoration:none">
+                        <div class="cartoon-image">
+                           <img src="../img/cartoon2.png" alt="" style="width:162px ">
+                        </div>
+                         <!--<div class="cartoon-name" style="text-align:center;color:var(--color-neutral-lighter)">   </div>-->
+                     </a>
+                  </div>
+
+               </div>
+
+                  <div class="cartoon-item-single" style="padding:1px 2px 8px;margin: 0.3em">
+                     <a href="#animal-profile-page" class="ui-link" style="text-decoration:none">
+                        <div class="cartoon-image">
+                           <img src="../img/cartoon4.png" alt="" style="width:162px ">
+                        </div>
+                         <!--<div class="cartoon-name" style="text-align:center;color:var(--color-neutral-lighter)">  </div>-->
+                     </a>
+                  </div>
+
+               </div>
+                 
+                 <div class="cartoon-item display-flex flex-justify-center">
+                  <div class="cartoon-item-single" style="padding:1px 2px 8px;margin: 0.3em">
+                     <a href="#animal-profile-page" class="ui-link" style="text-decoration:none">
+                        <div class="cartoon-image">
+                           <img src="../img/cartoon3.png" alt="" style="width:162px ">
+                        </div>
+                        <div class="cartoon-name" style="text-align:center;color:var(--color-neutral-lighter)">    </div>
+                     </a>
+                  </div>
+
+
+               <!--<div class="cartoon-item display-flex flex-justify-center">
+                  <div class="cartoon-item-single" style="padding:1px 2px 8px;margin: 0.3em">
+                     <a href="#animal-profile-page" class="ui-link" style="text-decoration:none">
+                        <div class="cartoon-image">
+                           <img src="../img/cartoon5.jpg" alt="" style="width:162px ">
+                        </div>
+                         div class="cartoon-name" style="text-align:center;color:var(--color-neutral-lighter)">  </div>
+                     </a>
+                  </div>-->
+
+                  <div class="cartoon-item-single" style="padding:1px 2px 8px;margin: 0.3em">
+                     <a href="#animal-profile-page" class="ui-link" style="text-decoration:none">
+                        <div class="cartoon-image">
+                           <img src="../img/cartoon6.png" alt="" style="width:162px">
+                        </div>
+                         <div class="cartoon-name" style="text-align:center;color:var(--color-neutral-lighter)">  </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+<footer data-role="footer">
 			<ul>
 		<li><a href="#recent-page">Recent</a></li>
 		<li><a href="#list-page">List</a></li>
@@ -74,51 +220,54 @@
 	</ul>
 
 	</footer>
-	
-</section>
 
-<!--list page -->
-	<section data-role="page" id="list-page">
-	<header data-role="header"><h1>Animals</h1>
-	<ul>
-		<li class="flex-stretch"></li>
-		<li><a href="#">+</a></li>	
-	</ul>
-</header>
-	<div data-role="main">
-		<ul>
-		<!--li*10>a[href=#animal-profile-page]>{Animal $}-->
-		<li><a href="#animal-profile-page">Animal1</a></li>
-		<li><a href="#animal-profile-page">Animal2</a></li>
-		<li><a href="#animal-profile-page">Animal3</a></li>
-		<li><a href="#animal-profile-page">Animal4</a></li>
-		<li><a href="#animal-profile-page">Animal5</a></li>
-		<li><a href="#animal-profile-page">Animal6</a></li>
-		<li><a href="#animal-profile-page">Animal7</a></li>
-		<li><a href="#animal-profile-page">Animal8</a></li>
-		<li><a href="#animal-profile-page">Animal9</a></li>
-		<li><a href="#animal-profile-page">Animal10</a></li>
-	</ul>
-
-
-
-	</div>
-	<footer data-role="footer">
-		<ul>
-		<li><a href="#recent-page">Recent</a></li>
-		<li><a href="#list-page">List</a></li>
-		<li><a href="#user-profile-page">Profile</a></li>
-	</ul>
-
-	</footer>
-
+ <div class="modal" id="list-add-animal">
+         <div class="modal-back" data-deactivate="#list-add-animal"></div>
+         <form class="modal-popup" id="list-add-animal-form" data-ajax="false">
+            <div class="modal-head"><h1>Add Cartoon</h1></div>
+            <div class="modal-body">
+               <div class="form-control">
+                  <label for="list-add-name" class="form-label">Cartoon Name</label>
+                  <input id="list-add-name" type="text" class="form-input" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-type" class="form-label">Cartoon Type</label>
+                  <input id="list-add-type" type="text" class="form-input" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-breed" class="form-label">Cartoon Breed</label>
+                  <input id="list-add-breed" type="text" class="form-input" data-role="none">
+               </div>
+            </div>
+            <div class="modal-foot">
+               <input type="submit" value="Save" data-role="none" class="form-button">
+            </div>
+         </form>
+      </div>
 	
 </section>
 
 <!--user-profile page -->
 	<section data-role="page" id="user-profile-page">
 	<div data-role="main">
-		<h1>User Profile</h1>
+		 <header data-role="header">
+		<ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#user-password-edit-page">Setting</a></li> 
+         </ul>
+     </header>
+<div class="user-profile-image">
+            <img src="../img/user.jpg" alt="" style="width:200px;float:left; border-radius: 50%">
+         </div>
+         <div class="profile">
+            <div class="profile-edit">        
+               <h1 id="
+               ">Samantha</h1>
+            </div>
+            <h3>Samantha123@cartoon.com</h3>
+         </div>
+
 	</div>
 	<footer data-role="footer">
 			<ul>
@@ -131,18 +280,62 @@
 	
 </section>
 
-<!--animal profile page -->
-	<section data-role="page" id="animal-profile-page">
-		<header data-role="header">
-			<h1>Animal Profile</h1>
-			<ul>
-		<li><a href="#" data-rel="back">Back</a></li>
-	</ul>
-		</header>
-	<div data-role="main">
-	</div>
+<!--animal profile page-->
+ <section data-role="page" id="animal-profile-page">
+      <header data-role="header">
+         <h1>Cartoon Profile</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <div class="monster-profile" style="background-color:#484D85;margin:0 20px;border-radius:1em">
+            <img src="img/Blabbit.png" alt="" style="width:200px;margin:auto;display:block">
+         </div>
 
-	
-</section>
-	</body>
+            <div style="padding:10px 20px 0 20px">
+               <h2>Pluto</h2>
+            
+               <div style="padding-bottom:40px">
+                  <div style="color:var(--color-neutral-lighter)"><strong>Character:</strong>  Goofy's dog</div>
+                  <div style="color:var(--color-neutral-lighter)"><strong>Movie:</strong> Goof Troop</div>
+               </div>
+
+          
+            </div>
+      </div>
+   </section>
+
+
+<!--user-password-edit-page-->
+	 <section data-role="page" id="user-password-edit-page">
+      <header data-role="header">
+         <h1>User setting</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            
+         </ul>
+      </header>
+      <div data-role="main">
+         <form id="user-password-form" data-ajax="false" style="padding:1em">
+            <div class="form-control">
+               <label for="user-password-oldpassword" class="form-label">Old Password</label>
+               <input id="user-password-oldpassword" type="password" class="form-input" data-role="none" placeholder="Type your old password">
+            </div>
+            <div class="form-control">
+               <label for="user-password-password" class="form-label">New Password</label>
+               <input id="user-password-password" type="password" class="form-input" data-role="none" placeholder="Type your new password">
+            </div>
+            <div class="form-control">
+               <label for="user-password-confirm" class="form-label">Confirm Password</label>
+               <input id="user-password-confirm" type="password" class="form-input" data-role="none" placeholder="Type your new password">
+            </div>
+            <div class="form-control-sib">
+               <input type="submit" data-role="none" class="form-button" value="Save">
+            </div>
+         </form>
+      </div>
+   </section>
+
+   </body>
 	</html>
